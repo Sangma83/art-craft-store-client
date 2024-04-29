@@ -1,6 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import Footer from "../shared/Footer/Footer";
-// import Navbar from "../shared/Navbar/Navbar";
 import registerPic from '../../assets/register.png';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -8,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
+import Navbar from "../shared/Navbar/Navbar";
 // import { Helmet } from "react-helmet-async";
 
 
@@ -74,7 +74,7 @@ const Register = () => {
              {/* <Helmet>
                 <title>Maple Ridge || Register</title>
             </Helmet> */}
-            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
 
     <div className="hero min-h-screen my-16">
   <div className="hero-content flex-col lg:flex-row-reverse gap-4">
