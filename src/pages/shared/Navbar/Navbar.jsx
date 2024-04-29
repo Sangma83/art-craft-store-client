@@ -1,18 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
-// import defaultPic from '../../../assets/default.jpg';
-// import { useContext } from 'react';
-// import { AuthContext } from '../../../providers/AuthProvider';
+import defaultPic from '../../../assets/default.jpg';
+import { useContext } from 'react';
+import { AuthContext } from '../../../providers/AuthProvider';
 // import ReactTooltip from 'react-tooltip';
 
 const Navbar = () => {
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    // const handleSignOut = () =>{
-    //     logOut()
-    //     .then()
-    //     .catch()
-    //   }
+    const handleSignOut = () =>{
+        logOut()
+        .then()
+        .catch()
+      }
 
     const navLinks = <>
        <li><NavLink to='/'>Home</NavLink></li>
@@ -20,13 +20,13 @@ const Navbar = () => {
        <li><NavLink to='/contact'>Contact Us</NavLink></li>
        {/* <li><NavLink to='/login'>Login</NavLink></li> */}
        <li><NavLink to='/register'>Register</NavLink></li>
-      {/* {
+      {
         user && <>
          <li><NavLink to='/addItem'>Add Craft Item</NavLink></li>
          <li><NavLink to='/myList'>My List</NavLink></li>
-         <li><NavLink to='/update'>Update Profile</NavLink></li>
+         {/* <li><NavLink to='/update'>Update Profile</NavLink></li> */}
         </>
-      } */}
+      }
     
     </>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   
-  {/* {user ? (
+  {user ? (
                     <>
                        
 
@@ -65,8 +65,11 @@ const Navbar = () => {
                         <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
                     </>
                 ) : (
+                    <>
                     <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
-                )} */}
+                    <Link to='/register'><button className="btn btn-ghost">Register</button></Link>
+                    </>
+                )}
   </div>
 </div>
     );
