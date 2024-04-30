@@ -45,6 +45,11 @@ const Register = () => {
           toast.error("Password should be at least one Uppercase characters!");
           return;
         }
+        else if(!/[a-z]/.test(password)){
+          setRegisterError();
+          toast.error("Password should be at least one Lowarcase characters!");
+          return;
+        }
 
 
         //create user

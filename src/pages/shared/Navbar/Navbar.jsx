@@ -1,12 +1,19 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
 import defaultPic from '../../../assets/default.jpg';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 // import ReactTooltip from 'react-tooltip';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isRegistered, setIsRegistered] = useState(false);
+   
+   
+    const handleRegister = () => {
+     
+      setIsRegistered(true);
+    };
 
     const handleSignOut = () =>{
         logOut()
@@ -19,7 +26,7 @@ const Navbar = () => {
        <li><NavLink to='/allCraftitem'>Art & Craft Item</NavLink></li>
        <li><NavLink to='/contact'>Contact Us</NavLink></li>
        {/* <li><NavLink to='/login'>Login</NavLink></li> */}
-       <li><NavLink to='/register'>Register</NavLink></li>
+       {/* <li><NavLink to='/register'>Register</NavLink></li> */}
       {
         user && <>
          <li><NavLink to='/addItem'>Add Craft Item</NavLink></li>
@@ -53,23 +60,29 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   
-  {user ? (
-                    <>
-                       
+  {
+  user ? (
 
-                          <div className="tooltip" data-tip={user.displayName}>
-                <button className=""><img alt="User profile" className="w-10 rounded-full" src={user?.photoURL || defaultPic}  /></button>
-                     </div>
-                       
-                     
-                        <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
-                    </>
-                ) : (
-                    <>
-                    <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
-                    <Link to='/register'><button className="btn btn-ghost">Register</button></Link>
-                    </>
-                )}
+    isRegistered ? (
+      // If user is not logged in but registered, show login button
+      <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+    ):
+    <>
+      <div className="tooltip" data-tip={user.displayName}>
+        <button className=""><img alt="User profile" className="w-10 rounded-full" src={user?.photoURL || defaultPic} /></button>
+      </div>
+      <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
+    </>
+  ) :
+  
+  (
+    <>
+      <Link to='/register'><button onClick={handleRegister} className="btn btn-ghost">Register</button></Link>
+      <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+    </>
+  )
+}
+
   </div>
 </div>
     );
