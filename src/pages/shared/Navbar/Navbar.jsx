@@ -24,16 +24,17 @@ const Navbar = () => {
     const navLinks = <>
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/allCraftitem'>Art & Craft Item</NavLink></li>
-       <li><NavLink to='/contact'>Contact Us</NavLink></li>
-       {/* <li><NavLink to='/login'>Login</NavLink></li> */}
-       {/* <li><NavLink to='/register'>Register</NavLink></li> */}
-      {
+       {
         user && <>
          <li><NavLink to='/addItem'>Add Craft Item</NavLink></li>
          <li><NavLink to='/myList'>My List</NavLink></li>
          {/* <li><NavLink to='/update'>Update Profile</NavLink></li> */}
         </>
       }
+       <li><NavLink to='/contact'>Contact Us</NavLink></li>
+       {/* <li><NavLink to='/login'>Login</NavLink></li> */}
+       {/* <li><NavLink to='/register'>Register</NavLink></li> */}
+      
     
     </>
 
