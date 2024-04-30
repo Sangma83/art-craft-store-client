@@ -61,11 +61,11 @@ const Header = () => {
 
         
             <div className="hero-content text-center text-neutral-content grid grid-cols-1 border-stone-950" style={heroContentStyle}>
-                <div className="max-w-8xl bg-slate-800 p-4 bg-opacity-50 rounded-lg border-x-4">
+                <div className="max-w-8xl bg-yellow-600 p-4 bg-opacity-50 rounded-lg border-x-4">
                     <h1 className="mb-5 text-6xl font-bold text-white space-y-4">Unique Art
                      & Paint <br/> For Sale</h1>
                     
-                    <button className="btn bg-[#bc986b] text-white">Discover More +</button>
+                    <button className="btn bg-[#724c1e] text-white">Discover More +</button>
                 </div>
 
             </div>
