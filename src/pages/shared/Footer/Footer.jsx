@@ -8,7 +8,7 @@ import payment from '../../../assets/payment-icon.png';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-black text-white">
+            <footer className="footer p-10 bg-slate-900 text-white">
   <nav>
     <h6 className="footer-title text-[#EB984E]">Importent link</h6> 
     <a className="link link-hover ">Help Center</a>
@@ -43,7 +43,7 @@ const Footer = () => {
   </nav>
   
 </footer>
-<footer className="footer footer-center p-4 bg-black text-white border-t-2">
+<footer className="footer footer-center p-4 bg-slate-950 text-white border-t-2">
   <aside>
     <p>Copyright © 2024 - All right reserved by Artistic Aura Ltd.</p>
   </aside>

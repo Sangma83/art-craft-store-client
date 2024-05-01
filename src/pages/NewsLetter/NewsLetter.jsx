@@ -9,7 +9,7 @@ const NewsLetter = () => {
     <fieldset className="form-control w-80 ml-96"> 
       <div className="join">
         <input type="text" placeholder="email address" className="input input-bordered join-item px-16 border-orange-800" /> 
-        <button className="btn bg-black text-white join-item">SUBSCRIBE</button>
+        <button className="btn bg-amber-950 text-white join-item">SUBSCRIBE</button>
       </div>
     </fieldset>
   </form>
