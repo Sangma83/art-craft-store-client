@@ -1,6 +1,4 @@
 import Swal from "sweetalert2";
-import Footer from "../shared/Footer/Footer";
-import Navbar from "../shared/Navbar/Navbar";
 
 
 
@@ -59,8 +57,6 @@ const AddCraftItem = () => {
 
     return (
         <div className="space-y-10">
-
-<Navbar></Navbar>
         <div className="bg-[#F5EEE8] p-24 rounded-lg">
           
       <h2 className="text-3xl font-extrabold text-center mb-4">Add Craft Item</h2>
@@ -236,7 +232,7 @@ const AddCraftItem = () => {
         />
       </form>
     </div>
-    <Footer></Footer>
+    
     </div>
     );
 };

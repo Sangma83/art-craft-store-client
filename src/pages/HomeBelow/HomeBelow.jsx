@@ -13,6 +13,9 @@ const HomeBelow = () => {
                 <p>True, however, when it comes to important matters.</p>
                 </div>
             </div>
+
+            <div className="divider lg:divider-horizontal"></div> 
+
             <div className="flex items-center gap-4">
             <GiWoodFrame className="text-5xl text-orange-700" />
              <div>
@@ -20,6 +23,9 @@ const HomeBelow = () => {
              <p>True, however, when it comes to important matters.</p>
              </div>
             </div>
+
+            <div className="divider lg:divider-horizontal "></div> 
+
             <div className="flex items-center gap-4">
             <AiOutlineDollarCircle className="text-5xl text-orange-700" />
               <div>
