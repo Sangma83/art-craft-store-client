@@ -20,13 +20,14 @@ const CraftCard = ({craft}) => {
           </div>
         <div className="card-body">
           <h2 className="card-title">{subcategory} | {name}</h2>
+          <p>{details}</p>
           <p className="flex items-center gap-2"><IoMdPerson className="text-orange-800" />by:{user} {time}</p>
           <div className="flex justify-between" >
           <p className="flex items-center gap-2"><LuBadgeDollarSign className="text-orange-800" /> {price}</p>
           <p className="flex items-center gap-2 ml-28"><GiVibratingShield className="text-orange-800" /> {rating}</p>   
           </div>
-          <p>{details}</p>
-          <div className="badge badge-ghost w-1/5 gap-2"><MdOutlineDashboardCustomize className="text-orange-800" />{custom}</div>
+          Customize:
+        <div className="badge badge-ghost w-1/5 gap-2"><MdOutlineDashboardCustomize className="text-orange-800" />{custom}</div>
           <div className="card-actions">
             <button className="btn bg-orange-800 text-white">View Details</button>
           </div>

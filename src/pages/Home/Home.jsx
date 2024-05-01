@@ -16,7 +16,7 @@ const Home = () => {
       <h2 className="text-5xl font-rambla text-center mt-8">CRAFT ITEMS</h2>
      <div className="grid md:grid-cols-3 gap-4 my-11">
      {
-        crafts.map(craft => <CraftCard
+        crafts.slice(0, 6).map(craft => <CraftCard
         key={craft._id}
         craft={craft}
         ></CraftCard>)
