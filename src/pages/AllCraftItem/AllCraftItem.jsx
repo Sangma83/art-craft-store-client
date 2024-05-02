@@ -7,19 +7,19 @@ const AllCraftItem = () => {
     // const {_id} = craft;
 
     return (
-        <div>
-           <h3>ALL Art & Craft List : {loadedAllCraft.length} </h3> 
+        <div className="my-20">
+            
            <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
     <thead>
       <tr>
         <th></th>
-        <th>Photo</th>
-        <th>Details</th>
-        <th>Time</th>
-        <th>Stock</th>
-        <th></th>
+        <th className="text-xl text-orange-800">Photo</th>
+        <th className="text-xl text-orange-800">Details</th>
+        <th className="text-xl text-orange-800">Time</th>
+        <th className="text-xl text-orange-800">Stock</th>
+        <th className="text-xl text-orange-800">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -53,7 +53,7 @@ const AllCraftItem = () => {
             <td>{craft.time}</td>
             <td>{craft.stock}</td>
             <th>
-              <Link to={`/craft/${craft._id}`}><button className="btn btn-ghost btn-xs"> View Details</button></Link>
+              <Link to={`/craft/${craft._id}`}><button className="btn btn-outline text-orange-700 btn-xs"> View Details</button></Link>
             </th>
           </tr>
 

@@ -11,6 +11,10 @@ const CraftViewDetail = () => {
     const { id } = useParams();
     const craft = crafts.find(craft => craft._id === id)
     console.log(craft);
+
+    
+
+      
     return (
         <div className=" mt-12 mb-20 text-xl">
             
