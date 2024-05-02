@@ -31,7 +31,8 @@ const AddCraftItem = () => {
           time,
         };
         console.log(addCoffee);
-    
+        
+      
         //add craft
         fetch("http://localhost:5000/crafts", {
           method: "POST",

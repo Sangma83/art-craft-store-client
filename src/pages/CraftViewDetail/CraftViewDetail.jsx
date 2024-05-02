@@ -2,7 +2,7 @@ import { GiVibratingShield } from "react-icons/gi";
 import { IoMdPerson } from "react-icons/io";
 import { IoTimer } from "react-icons/io5";
 import { LuBadgeDollarSign } from "react-icons/lu";
-import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { MdOutlineDashboardCustomize, MdOutlineMailOutline } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -12,7 +12,7 @@ const CraftViewDetail = () => {
     const craft = crafts.find(craft => craft._id === id)
     console.log(craft);
     return (
-        <div className=" mt-12 mb-20 text-2xl">
+        <div className=" mt-12 mb-20 text-xl">
             
             <div className="grid md:grid-cols-4 gap-4">
                 <div className="md:col-span-3">
@@ -33,6 +33,7 @@ const CraftViewDetail = () => {
           
           <p className="flex items-center gap-2"><IoMdPerson className="text-orange-800" />By: {craft.user}</p>
           <p className="flex items-center gap-2"><IoTimer className="text-orange-800" />Time: {craft.time}</p>
+          <p className="flex items-center gap-2"><MdOutlineMailOutline className="text-orange-800" />Email: {craft.email}</p>
          
           <p className="flex items-center gap-2"><LuBadgeDollarSign className="text-orange-800" />Price: {craft.price}</p>
           <p className="flex items-center gap-2"><GiVibratingShield className="text-orange-800" />Rate: {craft.rating}</p>   

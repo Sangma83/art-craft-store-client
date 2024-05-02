@@ -1,4 +1,3 @@
-// import Footer from "../shared/Footer/Footer";
 import loginPic from "../../assets/login.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -9,7 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 // import { Helmet } from "react-helmet-async";
 import { FcGoogle } from "react-icons/fc";
-import Navbar from "../shared/Navbar/Navbar";
+
 
 
 const Login = () => {
@@ -82,7 +81,7 @@ const Login = () => {
           {/* <Helmet>
                 <title>Maple Ridge || Login</title>
             </Helmet> */}
-            <Navbar></Navbar>
+         
 
     <div className="hero min-h-screen my-16">
   <div className="hero-content flex-col lg:flex-row-reverse gap-4">
