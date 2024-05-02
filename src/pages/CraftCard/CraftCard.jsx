@@ -2,11 +2,12 @@ import { GiVibratingShield } from "react-icons/gi";
 import { IoMdPerson } from "react-icons/io";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const CraftCard = ({craft}) => {
 
-    const {photo,name,subcategory,details,price,rating,custom,stock,user,time} = craft;
+    const {_id, photo,name,subcategory,details,price,rating,custom,stock,user,time} = craft;
 
     return (
         <div className="card w-full bg-base-100 shadow-xl">
@@ -29,7 +30,7 @@ const CraftCard = ({craft}) => {
           Customize:
         <div className="badge badge-ghost w-1/5 gap-2"><MdOutlineDashboardCustomize className="text-orange-800" />{custom}</div>
           <div className="card-actions">
-            <button className="btn bg-orange-800 text-white">View Details</button>
+           <Link to={`/craft/${_id}`}> <button className="btn bg-orange-800 text-white">View Details</button> </Link>
           </div>
         </div>
       </div>
