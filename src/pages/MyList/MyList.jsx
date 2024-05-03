@@ -1,11 +1,7 @@
-// import { useEffect } from "react";
-// import { useLoaderData} from "react-router-dom";
-// import { getStoreCraft } from "../../utility/localStorage";
-
 import { useEffect, useState } from "react";
 import useAuth from "../../providers/useAuth";
-import { key } from "localforage";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
 
@@ -52,9 +48,33 @@ const MyList = () => {
             }
           });
     }
+
+
+
+    const handleSort = (e) => {
+        const filterValue = e.target.value;
+        let sortedList = [];
+      
+        if (filterValue === "Yes") {
+          sortedList = list.filter((item) => item.custom === "Yes");
+        } else if (filterValue === "No") {
+          sortedList = list.filter((item) => item.custom === "No");
+        } else {
+          sortedList = list; 
+        }
+      
+        setList(sortedList);
+      };
+      
    
     return (
         <div>
+            <select onChange={handleSort} className="select select-bordered w-48 my-10">
+                <option value="">Sort by Customization</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
           <div className="grid md:grid-cols-3 gap-12">
           {
             list?.map(p => ( 
@@ -69,7 +89,8 @@ const MyList = () => {
                   <p>{p.stock}</p>
                   <div className="card-actions justify-center">
                     <button onClick={() => handleDelete(p._id)} className="btn btn-warning">Delete</button>
-                    <button className="btn btn-success">Update</button>
+                    <Link to={`/updatecraft/${p._id}`}><button className="btn btn-success">Update</button></Link>
+                    
                   </div>
                 </div>
               </div>

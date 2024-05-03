@@ -35,13 +35,13 @@ const router = createBrowserRouter([
       element: <AddCraftItem></AddCraftItem>
     },
     {
-      path: '/updatecraft',
-      element: <UpdateCraft></UpdateCraft>
+      path: '/updatecraft/:id',
+      element: <UpdateCraft></UpdateCraft>,
+      loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
     },
     {
       path: '/mylist',
-      element: <PrivateRoute><MyList></MyList></PrivateRoute> // Protected route
-      // loader: () => fetch('http://localhost:5000/crafts')
+      element: <PrivateRoute><MyList></MyList></PrivateRoute>
     },
     {
       path: '/allcraft',

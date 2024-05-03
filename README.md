@@ -38,6 +38,7 @@ Artistic Aura is an Art & Craft Store website specializing in Painting and Drawi
 - **Toast**: Description of how it was used.
 - **SweetAlert**: Description of how it was used.
 - **Swiper Slider**: Description of how it was used.
+- **Google Map React**: Description of how it was used.
 
 ## Author
 [Poushali Sangma](https://github.com/Sangma83)

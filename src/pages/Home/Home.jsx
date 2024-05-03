@@ -3,9 +3,14 @@ import HomeBelow from "../HomeBelow/HomeBelow";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import Header from "../shared/Header/Header";
 import CraftCard from "../CraftCard/CraftCard";
+import GoogleMap from "../GoogleMap/GoogleMap";
+import ExtraSec from "../ExtraSec/ExtraSec";
+import { useState } from "react";
+
 
 const Home = () => {
   const crafts = useLoaderData();
+  const [crafted, setCrafted] = useState(crafts);
 
   return (
     <div>
@@ -19,10 +24,15 @@ const Home = () => {
         crafts.slice(0, 6).map(craft => <CraftCard
         key={craft._id}
         craft={craft}
+        crafted={crafted}
+        setCrafted={setCrafted}
         ></CraftCard>)
       }
      </div>
       <div className="divider divide-orange-900 "></div>
+      <div className="divider"></div>
+      <ExtraSec></ExtraSec>
+      <GoogleMap></GoogleMap>
       <NewsLetter></NewsLetter>
      
     </div>

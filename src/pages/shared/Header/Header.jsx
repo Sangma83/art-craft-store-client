@@ -1,7 +1,7 @@
 import banner from '../../../assets/boyb.jpg';
 import banner2 from '../../../assets/Hand.jpg';
 import banner3 from '../../../assets/lady.jpg';
-import banner4 from '../../../assets/mixed.jpg';
+import banner4 from '../../../assets/hq720.jpg';
 import banner5 from '../../../assets/sadboy.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

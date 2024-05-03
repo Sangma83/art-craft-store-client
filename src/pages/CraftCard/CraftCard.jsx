@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const CraftCard = ({craft}) => {
 
-    const {_id, photo,name,subcategory,details,price,rating,custom,stock,user,time} = craft;
+    const {_id, photo,name,subcategory,details,price,rating,custom,stock,username,time} = craft;
     
 
     return (
@@ -24,7 +24,7 @@ const CraftCard = ({craft}) => {
         <div className="card-body">
           <h2 className="card-title">{subcategory} | {name}</h2>
           <p>{details}</p>
-          <p className="flex items-center gap-2"><IoMdPerson className="text-orange-800" />by:{user} {time}</p>
+          <p className="flex items-center gap-2"><IoMdPerson className="text-orange-800" />by:{username} {time}</p>
           <div className="flex justify-between" >
           <p className="flex items-center gap-2"><LuBadgeDollarSign className="text-orange-800" /> {price}</p>
           <p className="flex items-center gap-2 ml-28"><GiVibratingShield className="text-orange-800" /> {rating}</p>   
