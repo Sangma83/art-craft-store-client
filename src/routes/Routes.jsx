@@ -38,11 +38,11 @@ const router = createBrowserRouter([
       path: '/updatecraft',
       element: <UpdateCraft></UpdateCraft>
     },
-    // {
-    //   path: '/myList',
-    //   element: <MyList></MyList>,
-    //   loader: ({params}) => fetch(`http://localhost:5000/crafts/${params._id}`)
-    // },
+    {
+      path: '/mylist',
+      element: <PrivateRoute><MyList></MyList></PrivateRoute> // Protected route
+      // loader: () => fetch('http://localhost:5000/crafts')
+    },
     {
       path: '/allcraft',
       element: <AllCraftItem></AllCraftItem>,

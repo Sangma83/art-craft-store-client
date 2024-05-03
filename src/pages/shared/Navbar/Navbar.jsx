@@ -27,11 +27,11 @@ const Navbar = () => {
        {
         user && <>
          <li><NavLink to='/addcraft'>Add Craft Item</NavLink></li>
-         <li><NavLink to='/myList'>My List</NavLink></li>
+         <li><NavLink to='/mylist'>My List</NavLink></li>
          {/* <li><NavLink to='/update'>Update Profile</NavLink></li> */}
         </>
       }
-       <li><NavLink to='/contact'>Contact Us</NavLink></li>
+       {/* <li><NavLink to='/contact'>Contact Us</NavLink></li> */}
        {/* <li><NavLink to='/login'>Login</NavLink></li> */}
        {/* <li><NavLink to='/register'>Register</NavLink></li> */}
       
@@ -73,17 +73,19 @@ const Navbar = () => {
       <div className="tooltip" data-tip={user.displayName}>
         <button className=""><img alt="User profile" className="w-10 rounded-full" src={user?.photoURL || defaultPic} /></button>
       </div>
-      <button onClick={handleSignOut} className="btn btn-ghost">Sign Out</button>
+      <button onClick={handleSignOut} className="btn btn-ghost">Log Out</button>
     </>
   ) :
   
   (
     <>
-      <Link to='/register'><button onClick={handleRegister} className="btn btn-ghost">Register</button></Link>
+      
       <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
     </>
   )
+  
 }
+<Link to='/register'><button onClick={handleRegister} className="btn btn-ghost">Register</button></Link>
 
 <label className="swap swap-rotate">
   
