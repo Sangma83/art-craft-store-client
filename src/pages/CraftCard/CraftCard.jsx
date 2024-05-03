@@ -3,26 +3,16 @@ import { IoMdPerson } from "react-icons/io";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import { saveStoreCraft } from "../../utility/localStorage";
+
 
 
 const CraftCard = ({craft}) => {
 
     const {_id, photo,name,subcategory,details,price,rating,custom,stock,user,time} = craft;
     
-    
-
-    const handleCardMyList = () => {
-      saveStoreCraft(_id);
-      toast('Your Craft Item added Successfully');
-      console.log(_id);
-      // Redirect to My List page with the selected craft item ID
-      // history.push(`/mylist/${_id}`);
-    };
 
     return (
-        <div onClick={() =>handleCardMyList(_id)} className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl">
         <figure className="px-10 pt-10  flex-grow">
           <img src={photo} alt="Shoes" className="rounded-xl" />
         </figure>
@@ -45,7 +35,7 @@ const CraftCard = ({craft}) => {
            <Link to={`/craft/${_id}`}> <button className="btn bg-orange-800 text-white">View Details</button> </Link>
           </div>
         </div>
-        <ToastContainer></ToastContainer>
+        
       </div>
     );
 };
