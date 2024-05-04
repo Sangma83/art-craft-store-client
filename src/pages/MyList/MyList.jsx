@@ -10,7 +10,7 @@ const MyList = () => {
 
     console.log(user);
     useEffect(() =>{
-        fetch(`http://localhost:5000/crafts/${user?.email}`)
+        fetch(`https://art-craft-server-i72prvg7z-sangma83-s-projects.vercel.app/crafts/${user?.email}`)
         .then(res => res.json())
         .then(data => {
             setList(data);
@@ -30,7 +30,7 @@ const MyList = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/crafts/${_id}`, {
+                fetch(`https://art-craft-server-i72prvg7z-sangma83-s-projects.vercel.app/crafts/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())

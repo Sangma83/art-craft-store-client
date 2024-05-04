@@ -11,7 +11,7 @@ const UpdateCraft = () => {
     const [item, setItem] = useState({});
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/craft/${id}`)
+        fetch(`https://art-craft-server-i72prvg7z-sangma83-s-projects.vercel.app/craft/${id}`)
         .then(res => res.json())
         .then(data => {
             setItem(data);

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 
 const NewsLetter = () => {
