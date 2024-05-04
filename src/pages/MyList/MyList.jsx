@@ -42,6 +42,8 @@ const MyList = () => {
                             text: "Your art & craft item has been deleted.",
                             icon: "success"
                           }); 
+                          const remaining = list.filter((li) => li._id !== _id);
+              setList(remaining);
                     }
                 })
               
@@ -75,7 +77,7 @@ const MyList = () => {
                 <option value="No">No</option>
             </select>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-12 ml-16 lg:ml-0">
           {
             list?.map(p => ( 
 

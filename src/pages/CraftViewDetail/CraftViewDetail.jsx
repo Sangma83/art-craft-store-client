@@ -24,7 +24,7 @@ const CraftViewDetail = () => {
                 </div>
                  <div className="space-y-6">
                     <h2 className="font-bold text-orange-800 text-xl mb-6">{craft.subcategory} | {craft.name}</h2>
-                    <p>{craft.details}.</p>
+                    <p>{craft.details}</p>
 
                     <div className="">
           <div className="indicator-item indicator-bottom flex items-center ">

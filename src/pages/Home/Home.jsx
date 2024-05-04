@@ -6,6 +6,7 @@ import CraftCard from "../CraftCard/CraftCard";
 import GoogleMap from "../GoogleMap/GoogleMap";
 import ExtraSec from "../ExtraSec/ExtraSec";
 import { useState } from "react";
+import AllCategrieSection from "../AllCategorieSection/AllCategrieSection";
 
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
       
       <Header></Header>
       <HomeBelow></HomeBelow>
-      <h2 className="text-4xl font-rambla">this is home page</h2>
+     
       <h2 className="text-5xl font-rambla text-center mt-8">CRAFT ITEMS</h2>
      <div className="grid md:grid-cols-3 gap-4 my-11">
      {
@@ -32,6 +33,7 @@ const Home = () => {
       <div className="divider divide-orange-900 "></div>
       <div className="divider"></div>
       <ExtraSec></ExtraSec>
+      <AllCategrieSection></AllCategrieSection>
       <GoogleMap></GoogleMap>
       <NewsLetter></NewsLetter>
      
