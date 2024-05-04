@@ -1,4 +1,4 @@
-import  { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Reveal from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter';
@@ -8,7 +8,7 @@ const AllCategrieSection = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    fetch("https://art-craft-server-i72prvg7z-sangma83-s-projects.vercel.app/categories")
+    fetch("https://art-craft-server-phi.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

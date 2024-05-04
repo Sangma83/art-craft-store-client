@@ -40,7 +40,7 @@ const AddCraftItem = () => {
         
       
         //add craft
-        fetch("https://art-craft-server-i72prvg7z-sangma83-s-projects.vercel.app/crafts", {
+        fetch("https://art-craft-server-phi.vercel.app/crafts", {
           method: "POST",
           headers: {
             "content-type": "application/json",
